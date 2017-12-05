@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html><html><head><meta charset=utf-8><meta name=format-detection content="telephone=no"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0"><title></title><link rel=stylesheet href=css/font_317746_kmmurpagkg1fw29.css><link rel=icon href=static/img/favor.ico type=image/x-icon><link href=css/app.da4321af4d2c648425314c299c6895d3.css rel=stylesheet></head><body><div id=app-box><div class=loading style=position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center><img style=width:4rem src=picture/pageload.svg alt=""><p style=font-size:1rem;color:#999;margin-top:1rem>页面加载中，请稍后！</p></div></div><script type=text/javascript src=js/manifest.e689a292b1899d807c2f.js></script><script type=text/javascript src=js/vendor.924abbbb0f36dc75e21d.js></script><script type=text/javascript src=js/app.2efccc77708e3bd802bc.js></script></body><script>var bookList = {}
+    function appBack (page) {
+      if (page) {
+        jsToApp.back();
+      } else {
+        window.history.go( -1 );
+      }
+    }
+    function iosBack () {
+      const title = document.title
+      const url = window.location.href
+      window.location.href = 'http://liuwbox.com/zzbao/dist/#/iosBack?url=' + url + '&title=' + title
+    }
+    function getUserIos (name, phone) {
+      bookList.name = name
+      bookList.phone = phone
+      localStorage.mailName = name
+      localStorage.mailPhone = phone
+    }
+    function getUser (user) {
+      alert('姓名：' + user.name)
+      alert('手机号码：' + user.phone)
+    }
+    function getUserAndroid (obj) {
+      alert('返回：' + obj)
+    }
+    function loadURL(url) {
+      var iFrame;
+      iFrame = document.createElement("iframe");
+      iFrame.setAttribute("src", url);
+      iFrame.setAttribute("style", "display:none;");
+      iFrame.setAttribute("height", "0px");
+      iFrame.setAttribute("width", "0px");
+      iFrame.setAttribute("frameborder", "0");
+      document.body.appendChild(iFrame);
+      // 发起请求后这个 iFrame 就没用了，所以把它从 dom 上移除掉
+      iFrame.parentNode.removeChild(iFrame);
+      iFrame = null;
+    }
+    function openUrl(url) {
+      var iFrame;
+      iFrame = document.createElement("iframe");
+      iFrame.setAttribute("src", url);
+      iFrame.setAttribute("style", "display:none;");
+      iFrame.setAttribute("height", "0px");
+      iFrame.setAttribute("width", "0px");
+      iFrame.setAttribute("frameborder", "0");
+      document.body.appendChild(iFrame);
+      // 发起请求后这个 iFrame 就没用了，所以把它从 dom 上移除掉
+      // setTimeout(function() {
+      //   iFrame.parentNode.removeChild(iFrame);
+      //   iFrame = null;
+      // }, 5000)
+    }
+    function setPhoto (tag, url) {
+      localStorage[tag] = url
+    }</script></html>
